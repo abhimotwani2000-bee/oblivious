@@ -1,40 +1,157 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Oblivious</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oblivious - Chapter 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.8;
+      font-size: 1.2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: #000;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid gold;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: gold;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 650px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #1b1b1b;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+      transition: background 0.3s;
+    }
+    h2 {
+      color: gold;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      border-top: 2px solid gold;
+      color: #777;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: gold;
+      color: #000;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .light-mode {
+      background-color: #fdfdfd;
+      color: #111;
+    }
+    .light-mode .container {
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .light-mode header, .light-mode footer {
+      background: #f0f0f0;
+      color: #333;
+      border-color: #ccc;
+    }
+    .light-mode h2, .light-mode header h1 {
+      color: #444;
+    }
+  </style>
 </head>
-<body style="font-family: Georgia; background:#111; color:#eee; margin:20px;">
+<body>
+  <header>
+    <h1>Oblivious</h1>
+  </header>  <div class="container">
+    <h2>Chapter 1: How is that possible!</h2>
+    <p>The sun was setting over Greenhill, splashing the sky with pink and gold. John leaned against the rickety porch railing of the town’s tavern, staring at the palace on the hill. Its tall towers glowed like something from a storybook, grand and full of secrets. He sipped his lemonade, thinking about a day long ago when he’d visited that very palace.</p>
+    <p>Back then, the palace had been buzzing with music and laughter. A boy named Mike had been there, standing next to his dad, Ross, who looked like he could run the whole world. Mike had a smile that made everyone feel happy, and his eyes sparkled with mischief.</p>
+    <p>“Hey there,” John had said, bending down to talk to Mike. “What’s your name?”</p>
+    <p>“Mike,” the boy answered, grinning wide.</p>
+    <p>“How old are you, Mike?” John asked.</p>
+    <p>“Twenty years younger than my dad,” Mike said with a giggle, making John laugh.</p>
+    <p>“You’re a clever one,” John said, giving Mike a friendly pat on the shoulder. “Just like your dad!”</p>
+    <p>That memory was one of John’s favorites—Mike’s big smile, the fun party, and the feeling that everything was perfect. He never imagined Mike would become part of a mystery.</p>
+    <p>“John, you okay?” Jake’s voice pulled him back to the present. Jake was sprawled in a chair across the porch, his boots propped on a crate. He was a young man with messy hair and a grin that said he was always ready for an adventure.</p>
+    <p>John smiled. “Just thinking about Mike. He was a funny kid with a great smile. I never thought he’d disappear.”</p>
+    <p>Jake sat up, surprised. “Disappear? What happened to him?”</p>
+    <p>“You didn’t hear?” John said, his voice quiet. “Mike went missing a year ago. No one’s seen him since.”</p>
+    <p>Jake’s eyes widened. “That’s terrible! How did he go missing?”</p>
+    <p>John glanced at the palace, its windows twinkling like stars. “It happened on his eighteenth birthday, at a huge party in the palace.”</p>
+    <p>“You mean that giant house on the hill?” Jake asked, leaning forward.</p>
+    <p>“Yup,” John said. “That’s where Mike’s dad, Ross, lives. He’s a big-deal businessman, so he has a palace, not a regular house like us.”</p>
+    <p>Jake crossed his arms. “Well, if I didn’t have my family keeping me here, I’d leave Greenhill and live somewhere exciting!”</p>
+    <p>John chuckled. “Oh yeah? Where would you go?”</p>
+    <p>“A big city!” Jake said, his eyes shining. “Or that palace. It looks amazing!”</p>
+    <p>“You wouldn’t last one day in a city,” John teased. “And that palace? It’s not as safe as it seems.”</p>
+    <p>Jake made a face. “What do you mean? It’s just a fancy house!”</p>
+    <p>“Haven’t you heard the stories?” John said, lowering his voice like he was sharing a secret. “Weird things happen at that palace.”</p>
+    <p>Jake rolled his eyes. “You mean those silly tales about the Greenhill Palace? They’re just made-up stories!”</p>
+    <p>John frowned. “What about the people who got lost in the forest behind the palace? Like Mike?”</p>
+    <p>Jake shrugged. “I don’t believe in mysteries unless I see them myself.”</p>
+    <p>“Then you should’ve been at Mike’s birthday party,” John said mysteriously.</p>
+    <p>Jake’s curiosity sparked. “I was out of town that day, or I’d have been there! What happened at the party?”</p>
+    <p>John shook his head. “It was a year ago. Let’s not talk about it.”</p>
+    <p>“Oh, come on!” Jake begged, grinning. “Tell me about the Greenhill Palace mysteries!”</p>
+    <p>John sighed. “You wouldn’t believe me anyway.”</p>
+    <p>“I would if you took me there!” Jake said, his eyes twinkling with excitement.</p>
+    <p>John shook his head. “No way. Ross would be so mad if I brought you to his palace.”</p>
+    <p>“But you’re his best friend!” Jake said. “And they’re away for a whole week!”</p>
+    <p>“I’m not taking you,” John said firmly. “That palace has super valuable paintings and stuff. You’d probably touch everything!”</p>
+    <p>“Hey!” Jake said, pretending to be offended. “I’m practically a detective. I’d be careful!”</p>
+    <p>John laughed. “A detective? Like that goofy TV show you watch?”</p>
+    <p>“I solved that argument between Jess and that guy last month,” Jake said proudly.</p>
+    <p>“That doesn’t make you a detective,” John said, still smiling.</p>
+    <p>Jake threw his hands up. “Okay, fine! But please, just take me to the palace!”</p>
+    <p>John looked at Jake’s eager face and sighed. “Alright, alright. We’ll go at five tonight. The butler leaves then, so the palace will be empty.”</p>
+    <p>Jake cheered. “Yes! I promise I won’t touch anything without asking!”</p>
+    <p>“You better not,” John said. “Meet me at the Golden Circle, and don’t be late.”</p>
+    <p>The hill to the palace was steep, and Jake’s boots kicked up dust as he climbed. The sun was almost gone, and the sky was turning purple. John was supposed to meet him at the Golden Circle, but he hadn’t shown up. Jake was too excited to wait, so he decided to go to the palace alone.</p>
+    <p>When he reached the top, he stopped and stared.</p>
+    <p>The palace was even cooler up close, with huge doors and vines climbing the walls like green ribbons. Behind it, a forest stretched out, its trees swaying in the breeze. The palace looked like it belonged in an adventure book.</p>
+    <p>“Wow,” Jake said, grinning. “This place isn’t spooky at all!”</p>
+    <p>Inside, the palace was like a dream. A giant room with shiny floors and sparkling chandeliers greeted him. A big staircase curled up to the next floor, and pictures of fancy people and pretty places hung on the walls. Jake walked slowly, his eyes wide, feeling like an explorer in a new world.</p>
+    <p>He wandered into a bedroom and saw a photo on the wall. It was Mike, smiling his big, happy smile, standing next to Ross in front of the palace. Jake’s heart felt a little heavy. Where are you, Mike?</p>
+    <p>A window caught his attention, showing the forest outside, now dark and mysterious. He was about to turn away when he saw something move—a shadowy figure climbing up the palace wall! Jake’s heart raced, but he was more curious than scared.</p>
+    <p>He hid in a closet, peeking out as the figure slipped through the window and landed in the room.</p>
+    <p>The person wore a mask and carried a black bag. “The butler’s gone,” he whispered, then hurried out of the room.</p>
+    <p>Jake’s mind buzzed. Who is that? How does he know when the butler leaves? He decided to follow, tiptoeing quietly. The masked person was looking for something, checking shelves and peeking behind pictures. He moved through the palace like he knew every corner, which made Jake super curious.</p>
+    <p>Jake kept following, staying sneaky. When the person went into the kitchen, Jake thought he might be getting a snack. But then the figure stopped and took off the mask.</p>
+    <p>Jake’s jaw dropped. He couldn’t believe his eyes. No way! It’s Mike!</p>
+  </div>  <footer>
+    <p>© 2025 Oblivious</p>
+  </footer><button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark</button>
 
-  <h1 style="text-align:center; color:gold;">Oblivious</h1>
-  <hr>
-
-  <!-- Chapter 1 -->
-  <div id="ch1">
-    <h2 style="color:gold;">Chapter 1: How is that possible!</h2>
-    <p>Paste your Chapter 1 text here...</p>
-    <p><a href="#ch2" style="color:gold;">Next →</a></p>
-  </div>
-
-  <!-- Chapter 2 -->
-  <div id="ch2">
-    <h2 style="color:gold;">Chapter 2: εκλείπω</h2>
-    <p>Paste your Chapter 2 text here...</p>
-    <p>
-      <a href="#ch1" style="color:gold;">← Previous</a> | 
-      <a href="#ch3" style="color:gold;">Next →</a>
-    </p>
-  </div>
-
-  <!-- Chapter 3 -->
-  <div id="ch3">
-    <h2 style="color:gold;">Chapter 3: The Mystery!</h2>
-    <p>Paste your Chapter 3 text here...</p>
-    <p><a href="#ch2" style="color:gold;">← Previous</a></p>
-  </div>
-
-  <hr>
-  <p style="text-align:center; color:#777;">© 2025 Oblivious</p>
-
-</body>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script></body>
 </html>
